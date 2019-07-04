@@ -1,0 +1,18 @@
+{
+    "type": "postgres",
+    "host": "127.0.0.1",
+    "port": 5433,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "ocizo",
+    "synchronize": false,
+    "logging": true,
+    "entities": ["build/db/entity/*.js"],
+    "migrations": ["build/db/migration/*.js"],
+    "subscribers": ["build/db/subscriber/*.js"],
+    "cli": {
+        "entitiesDir": "src/db/entity",
+        "migrationsDir": "src/db/migration",
+        "subscribersDir": "src/db/subscriber"
+    }
+}

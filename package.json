@@ -1,0 +1,42 @@
+{
+    "name": "ts-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node build/server.js",
+        "dev": "npm run tsc:w & nodemon build/server.js",
+        "tsc": "tsc",
+        "tsc:w": "tsc --watch",
+        "typeorm": "typeorm",
+        "db:init": "typeorm migration:run && typeorm schema:sync",
+        "db:sync": "typeorm schema:sync",
+        "db:refresh": "typeorm schema:drop && typeorm schema:sync"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@graphile-contrib/pg-simplify-inflector": "^5.0.0-beta.1",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "module-alias": "^2.2.0",
+        "passport": "^0.4.0",
+        "passport-jwt": "^4.0.0",
+        "pg": "^7.11.0",
+        "postgraphile": "^4.4.1",
+        "postgraphile-plugin-connection-filter": "^1.1.1",
+        "reflect-metadata": "^0.1.10",
+        "typeorm": "0.2.18",
+        "typescript": "^3.5.2"
+    },
+    "_moduleAliases": {
+        "@": "build"
+    },
+    "devDependencies": {
+        "ts-node": "3.3.0",
+        "@types/node": "^8.0.29"
+    }
+}
